@@ -30,7 +30,7 @@
 	?>
 	<div class="kalkulator">
 		<h2 class="judul">Kalkulator Sederhana</h2>
-		<form method="post" action="kalkulator.php">			
+		<form method="post" action="index.php">			
 			<input type="text" name="bil1" class="bil" autocomplete="off" placeholder="Bilangan Pertama">
 			<input type="text" name="bil2" class="bil" autocomplete="off" placeholder="Bilangan Kedua">
 			<select class="opt" name="operasi">
@@ -41,9 +41,9 @@
 			</select>
 			<input type="submit" name="hitung" value="Hitung" class="tombol">											
 		</form>
-		<?php if(isset($_POST['hitung'])){ ?>
-			<input type="text" value="<?php echo $hasil; ?>" class="bil">
-		<?php }else{ ?>
+            <?php if(isset($_POST['hitung'])){ ?>
+                <input type="text" value="<?php echo $hasil; ?>" class="bil">
+            <?php }else{ ?>
 			<input type="text" value="0" class="bil">
 		<?php } ?>			
 	</div>
